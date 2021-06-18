@@ -52,7 +52,7 @@ const productSchema = new mongoose.Schema(
     },
     size: {
       type: String,
-      enum: ["3 x 5", "5 x 8", "8 x 10", "9 x 12", "12 x 15"],
+      enum: ["5 x 7", "5 x 8", "9 x 6", "8 x 10", "8 x 11", "9 x 12"],
     },
     // ratings: [
     //   {
