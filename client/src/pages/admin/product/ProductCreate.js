@@ -3,7 +3,8 @@ import AdminNav from "../../../components/nav/AdminNav";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { createProduct } from "../../../functions/product";
-import ProductCreateForm from "../../../components/forms/PorductCreate";
+import ProductCreateForm from "../../../components/forms/PorductCreateForm";
+import { getCategories } from "../../../functions/category";
 
 const initiateState = {
   title: "",
@@ -24,6 +25,13 @@ const ProductCreate = () => {
 
   //redux
   const { user } = useSelector((state) => ({ ...state }));
+
+  useEffect(() => {
+    loadCategories();
+  }, []);
+
+  const loadCategories = () =>
+    getCategories().then((c) => setValues({ ...values, categories: c.data })); //res.json({categories: res.data})
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,6 +62,7 @@ const ProductCreate = () => {
         <div className="col-md-10">
           <h4>Product create</h4>
           <hr />
+
           <ProductCreateForm
             handleSubmit={handleSubmit}
             handleChange={handleChange}
