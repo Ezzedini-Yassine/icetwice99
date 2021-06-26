@@ -46,13 +46,53 @@ const productSchema = new mongoose.Schema(
     // images: {
     //   type: Array,
     // },
-    Shipping: {
+    shipping: {
       type: String,
       enum: ["Yes", "No"],
     },
-    size: {
+    color: {
       type: String,
-      enum: ["5 x 7", "5 x 8", "9 x 6", "8 x 10", "8 x 11", "9 x 12"],
+      enum: [
+        "Black",
+        "White",
+        "Blue",
+        "Brown",
+        "Orange",
+        "Gold/Yellow",
+        "Gray/Silver",
+        "Green/Olive",
+        "Red/Burgund",
+      ],
+    },
+    pile: {
+      type: String,
+      enum: ["Wool", "Nylon", "Polypropylene"],
+    },
+    weigth: {
+      type: Number,
+      required: true,
+      trim: true,
+    },
+
+    height_feet: {
+      type: Number,
+      required: true,
+      trim: true,
+    },
+    height_inch: {
+      type: Number,
+      required: true,
+      trim: true,
+    },
+    width_feet: {
+      type: Number,
+      required: true,
+      trim: true,
+    },
+    width_inch: {
+      type: Number,
+      required: true,
+      trim: true,
     },
     // ratings: [
     //   {

@@ -16,8 +16,25 @@ const initiateState = {
   shipping: "",
   quantity: "",
   images: [],
-  sizes: ["5 x 7", "5 x 8", "9 x 6", "8 x 10", "8 x 11", "9 x 12"],
-  size: "",
+  colors: [
+    "Black",
+    "White",
+    "Blue",
+    "Brown",
+    "Orange",
+    "Gold/Yellow",
+    "Gray/Silver",
+    "Green/Olive",
+    "Red/Burgund",
+  ],
+  color: "",
+  piles: ["Wool", "Nylon", "Polypropylene"],
+  pile: "",
+  weigth: "",
+  height_feet: "",
+  height_inch: "",
+  width_feet: "",
+  width_inch: "",
 };
 
 const ProductCreate = () => {
