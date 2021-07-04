@@ -14,7 +14,7 @@ const AdminProductCard = ({ product }) => {
       hoverable
       cover={
         <img
-          alt=""
+          alt={title}
           src={images && images.length ? images[0].url : imagenotfound}
           style={{ heigth: "150px", objectFit: "cover" }}
           className="p-1"
