@@ -100,7 +100,7 @@ const ProductCreate = () => {
           )}
           <hr />
 
-          {JSON.stringify(values.images)}
+          {/* {JSON.stringify(values.images)} */}
 
           <div className="p-3">
             <FileUpload
