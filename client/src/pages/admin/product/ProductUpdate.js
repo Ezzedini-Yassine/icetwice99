@@ -76,7 +76,7 @@ const ProductUpdate = ({ match }) => {
 
         <div className="col-md-10">
           <h4>Product Update</h4>
-          {/* {JSON.stringify(values)} */}
+          {JSON.stringify(values)}
 
           <ProductUpdateForm
             handleSubmit={handleSubmit}
