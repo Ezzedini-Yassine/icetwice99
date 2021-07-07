@@ -18,7 +18,7 @@ const ProductCreateForm = ({
     description,
     price,
     categories,
-    catgeory,
+    category,
     subs,
     shipping,
     quantity,
